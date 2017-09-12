@@ -1,0 +1,93 @@
+# Site settings
+title: WEB—连接世界 
+header-img: img/home-bg.jpg
+email: leunggabou@gmail.com
+description: "梁家宝|我的前端" 
+url: "http://leunggabou.com"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+lean_cloud :
+  app_id   :  h0VLBqXqt7BQzRvaRk9fUWBs-gzGzoHsz
+  app_key  :  0n7pgyymgltq2x7m1k2p2Drx
+
+
+# SNS settings
+RSS: false
+
+zhihu_username:    "A-bao-96-07-09"
+github_username:    "Steven19960709"
+#twitter_username:   huxpro
+#facebook_username:  huxpro
+# linkedin_username:  firstname-lastname-idxxxx
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+#markdown: kramdown
+#kramdown:
+  #input: GFM                            # use Github Flavored Markdown !important
+
+
+defaults:
+  -
+    scope: 
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Steven.Leung"
+      header-img: "img/post-bg-universe.jpg" # We don't want posts without a header image, that whould mean white on white
+      favicon: img/favicon.ico
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+google_analytics: 
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "just for my dream"
+sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+
