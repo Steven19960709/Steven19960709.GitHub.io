@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 高性能JavaScript笔记（2）
+title: 读高性能JavaScript笔记（2）
 date: 2017-08-29
 tags: [JavaScript,share]
 ---
