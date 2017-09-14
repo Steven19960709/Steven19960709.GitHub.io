@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识(21)————JavaScript对象枚举和arguments
+title: 前端核心知识（21）———— JavaScript对象枚举和arguments
 date: 2017-07-28
 tags: [JavaScript]
 ---

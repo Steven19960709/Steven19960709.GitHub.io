@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（27）———JavaScript DOM滚动条操作和CSS脚本化
+title: 前端核心知识（27）———— JavaScript DOM滚动条操作和CSS脚本化
 date: 2017-08-02
 tags: [JavaScript]
 ---

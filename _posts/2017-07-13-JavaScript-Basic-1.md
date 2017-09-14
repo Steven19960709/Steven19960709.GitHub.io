@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（10）——JavaScript 初探
+title: 前端核心知识（10）———— JavaScript 初探
 date: 2017-07-13
 categories: blog
 tags: [JavaScript]

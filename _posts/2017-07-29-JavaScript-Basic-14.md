@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识(23）————JavaScript DOM操作
+title: 前端核心知识（23）————JavaScript DOM操作
 date: 2017-07-29
 tags: [JavaScript]
 ---

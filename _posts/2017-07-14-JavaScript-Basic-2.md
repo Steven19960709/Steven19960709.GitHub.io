@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（11）——JavaScript运算符
+title: 前端核心知识（11）———— JavaScript运算符
 date: 2017-07-14
 categories: blog
 tags: [JavaScript]
