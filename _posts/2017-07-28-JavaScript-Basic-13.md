@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（22）————JavaScript之数组
+title: 前端核心知识（22）———— JavaScript之数组
 date: 2017-07-28
 tags: [JavaScript]
 ---

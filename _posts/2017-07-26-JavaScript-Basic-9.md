@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（18）————JavaScript继承发展史，命名空间
+title: 前端核心知识（18）———— JavaScript继承发展史，命名空间
 date: 2017-07-26
 tags: [JavaScript]
 ---

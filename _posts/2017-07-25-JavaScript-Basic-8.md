@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  前端核心知识（17）————JavaScript原型和call、apply的用法
+title:  前端核心知识（17）———— JavaScript原型和call、apply的用法
 date: 2017-07-25
 tags: [JavaScript]
 ---

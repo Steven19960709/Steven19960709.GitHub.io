@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（20）————JavaScript类数组和特殊语句
+title: 前端核心知识（20）———— JavaScript类数组和特殊语句
 date: 2017-07-27
 tags: [JavaScript]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（19）————JavaScript this指向深谈
+title: 前端核心知识（19）———— JavaScript this指向深谈
 date: 2017-07-27
 tags: [JavaScript]
 ---

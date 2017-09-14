@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（25）————JavaScript 日期对象
+title: 前端核心知识（25）———— JavaScript 日期对象
 date: 2017-07-31
 tags: [JavaScript]
 ---

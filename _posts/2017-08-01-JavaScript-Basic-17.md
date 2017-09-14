@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（26）————DOM基本操作（BOM重叠版）
+title: 前端核心知识（26）———— DOM基本操作（BOM重叠版）
 date: 2017-08-01
 tags: [JavaScript]
 ---

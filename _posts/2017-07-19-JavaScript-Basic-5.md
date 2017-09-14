@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（14）————JavaScript预编译、作用域和闭包
+title: 前端核心知识（14）———— JavaScript预编译、作用域和闭包
 date: 2017-07-19
 tags: [JavaScript]
 ---

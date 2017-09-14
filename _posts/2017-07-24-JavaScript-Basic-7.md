@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（16）————JavaScript对象，构造函数原理和包装类
+title: 前端核心知识（16）———— JavaScript对象，构造函数原理和包装类
 date: 2017-07-24
 tags: [JavaScript]
 ---
