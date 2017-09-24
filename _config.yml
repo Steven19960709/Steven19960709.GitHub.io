@@ -3,8 +3,6 @@ title: WEB—连接世界
 header-img: img/home-bg.jpg
 email: leunggabou@gmail.com
 description: "梁家宝|我的前端" 
-SEOTitle: 梁家宝的博客 | WEB—连接世界
-keyword: "梁家宝, Steven梁家宝, 梁家宝,  @leunggabou,leunggabou的博客, Steven Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
 url: "http://leunggabou.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 lean_cloud :
