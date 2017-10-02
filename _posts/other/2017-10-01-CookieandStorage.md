@@ -1,7 +1,7 @@
 ---
 layout: post
 title: cookies和Storage的区别
-tags: [Interval,network]
+tags: [Interview,network]
 date: 2017-10-01
 ---
 
