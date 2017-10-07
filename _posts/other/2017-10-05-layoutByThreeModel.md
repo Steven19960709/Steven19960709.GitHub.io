@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 多种方法实现三栏布局
-tags: [HTML,css,Interview]
+tags: [HTML,CSS,Interview]
 date: 2017-10-05
 ---
 

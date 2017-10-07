@@ -2,7 +2,7 @@
 layout: post
 title: 多种方法实现两列布局
 date: 2017-10-05
-tags: [Interview,css,HTML]
+tags: [Interview,CSS,HTML]
 ---
 
 上一篇文章讲了三栏布局，这篇文章就讲一下两列布局吧。其实大体上都是差不多的，主要是用来巩固的。
