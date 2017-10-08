@@ -40,12 +40,14 @@ tags: [JavaScript]
           var test = add();
           test();
           test();
-          
+
+  
 我们可以利用闭包产生一个公有变量，对于上述例子，公有变量就是num。add函数，把demo函数返回到了外部，demo函数，仍然有add函数的执行上下文，所有每次执行test的时候，就相当于执行demo函数，并且每次访问的num都是同一个num变量，这样，我们就称num就是公有变量，通过这样的操作方式，就可以利用闭包产生一个累加器了。
 
 ### 做缓存机构
 
 再看以下代码：
+
             function test(){
                var num = 0;
                function a() {
