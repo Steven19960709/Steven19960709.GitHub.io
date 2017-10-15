@@ -1,0 +1,31 @@
+---
+layout: post
+title: React 列表和Keys
+date: 2017-10-10
+tags: [React]
+----
+
+我们可以使用map()函数让数组中的每一项翻倍。
+
+    const numbers = [1,2,3,4,5]
+    const doubled = numbers.map((number) => number * 2)
+    console.log(doubled);//[2,4,6,8,10]
+
+## 渲染多样组件
+
+通过“{}”在JSX创建一个元素集合
+
+    const numbers = [1, 2, 3, 4, 5];
+    const listItems = numbers.map((number) =>
+        <li>{number}</li>
+    );
+
+把整个listItems插入到ul元素中，然后渲染进DOM:
+
+    ReactDOM.render(
+        <ul>{listItems}</ul>,
+        document.getElementById('root')
+    );//生成一个1到5的数字列表
+
+
+
