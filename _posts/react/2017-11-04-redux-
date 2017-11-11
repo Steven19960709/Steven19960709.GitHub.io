@@ -1,0 +1,85 @@
+---
+layout: post
+title: redux
+date: 2017-11-04
+tags: [redux]
+---
+
+## redux三大原则
+
+1 单一数据源
+
+一个应用里只有唯一的数据源。好处：整个应用状态都保存在一个对象中，这样我们随时可以提取整个应用的状态进行持久化（比如实现一个针对整个应用的即时保存功能，也为服务端渲染提供了可能）RedU型提供的公举韩式combineReducer可以化解数据源对象过于庞大的问题。
+
+2.状态是只读的
+
+在redux中我们并不会自己用代码来定义一个store，取而代之的white，我们定义一个reducer它的功能是根据当前出发的action对当前应用的状态进行迭代，这里我们并没有直接修改应用的状态，而是会接返回一个新的状态。
+Redux提供的createStore方法会根据reducer生成石头肉额。最后，我们利用store.dispatch方法来达到修改状态的目的。
+
+3.状态修改均有纯函数完成
+
+在redux中，我们通过定义reduce人来确定状态的修改，而每一个reducer都是 纯函数，这意味着他么你有副作用，及接受一定的输入，必定会得到一定的输出。
+
+这样的设计好处不仅在于reducer对状态的修改变得简单，纯粹可测试，更有意思的是，RedU型利用每次新返回的状态生成time travel调试方式，让每次跟踪每一次因为出发action而改变结果成为可能。
+
+## 核心API
+
+在redux里负责相应action并修改数据的角色就是reducer，reducer本质上是一个函数，reducer(previousStaet,action ) => newState.根据先前的状态和action来计算出新的newState
+
+在实际应用中，在处理previousState的时候，还需要一个previousState是，还需要有一个特殊的非空判断。和你安然reducer第一次执行的时候，并没有任何的previousSTate，而reducer的最终职责是返回一个新的state，因此需要在这种特殊情况下返回一个定义好的initialState：
+	
+	const initalSTae = {
+		todos :[] ,
+	};
+
+Redux 最核心的API就是createStore
+
+getState() : 获取store当前的状态
+dispatch(action) : 奋发一个action，并返回一个action，这个是唯一能够改变store数据的方式
+subscribe（listener）：注册一个监听者，它在store发生变化的时候，调用。
+replaceReducer（nextReducer）：更新当前store的reducer，一般只会在开发模式中调用这个方法。
+
+## 与React的绑定
+
+React-RedU型提供了一个组件和一个API，provider接受一个store作为props，它是整个Redux应用的整个顶层组件，而connect（）提供了在整个React应用的任意组件中获取store的数据的功能。
+
+## react redux 
+
+与React的绑定 给一个父节点 子节点里面就可以直接调用
+
+const connect = () => {
+	//返回一个节点，
+}
+
+connect from react-redux;
+connect 返回一个函数 ， 
+connect (mapStateToProps, mapDispatchToProps)(TodoList);
+
+const mapStateToProps = (state) => {//把state映射到props里面()
+	return {
+		todo: getVisibleTodos(state.todo, state.visibale);
+	}
+}
+const mapStateToDispatch = (dispatch) {
+	return {
+		onClickTodo: (id) =>}
+		return {
+			onClick
+		}
+	}
+}
+
+mapStateToProps(state),mapDispatchToProps(dispatch).
+
+const connect = (mapStateToProps, mapDisptatchToProps) =>{
+	return(WrapperComponent) =>{
+		class connect extends Component {
+			componentDidMount(){
+				const store = this.context.store;
+				this.unsubscribe = store.context.store;
+			}
+			
+		}
+	}
+}
+、、可以自己更新自己 可以使用props读取
