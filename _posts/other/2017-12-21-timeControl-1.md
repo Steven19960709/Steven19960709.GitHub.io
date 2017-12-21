@@ -119,5 +119,4 @@ Immediate根Debounce有点区别。它是立即激活回调，然后等待后续
     };
     window.onkeydown = immediatedLog;
 
-## 实例解析防抖（debouncing）和节流阀(Throttling)
-
+那么这篇文章就先讲到这，下一篇就开始将实例。
