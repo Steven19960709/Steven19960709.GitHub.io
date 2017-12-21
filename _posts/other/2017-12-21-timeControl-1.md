@@ -1,3 +1,4 @@
+---
 layout: post
 title: 关于函数防抖的一些知识（1）
 tags: [other]
