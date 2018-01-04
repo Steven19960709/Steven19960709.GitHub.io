@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 百度AI前端实习生二面
-tags: [Interval]
+tags: [Interview]
 date: 2017-10-08
 ---
 
