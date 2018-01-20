@@ -1,0 +1,21 @@
+---
+layout: post
+title: Web安全之XSS跨站脚本攻击
+date: 2018-01-20
+tags: [WebSafe]
+---
+
+## XSS简介
+
+XSS跨站脚本攻击，英文全称是Cross Site Script，未区分与CSS的区别就改为XSS，指的是黑客通过HTML注入，篡改了网页，插入了恶意脚本。
+
+例如：
+
+    <?php
+       $nput = $_GET['param'];
+       echo "<div>".$input."</div>"
+    ?>
+   
+例如，正常输入文本的话是不会有什么问题的，但是没如果提交了一段HTML代码，那么，这段代码就会执行。
+  
+  http://www.xxxxxx.com/test.php?param=<s
