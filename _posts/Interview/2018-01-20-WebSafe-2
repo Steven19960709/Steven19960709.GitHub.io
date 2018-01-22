@@ -18,4 +18,152 @@ XSS跨站脚本攻击，英文全称是Cross Site Script，未区分与CSS的区
    
 例如，正常输入文本的话是不会有什么问题的，但是没如果提交了一段HTML代码，那么，这段代码就会执行。
   
-  http://www.xxxxxx.com/test.php?param=<s
+    http://www.xxxxxx.com/test.php?param=<script>alert(/xss)</script>
+ 
+这样可以发现，页面中script就被执行了。
+
+这个就是XSS的第一种类型，反射型XSS。
+
+XSS根据效果的不同可以分为：
+
+- 反射型XSS
+
+这种XSS只是简单滴吧用户输入的数据“反射”给浏览器。也就是说，黑客往往需要诱导用户点击一个链接才能攻击成功。也称作非持久性XSS。
+
+- 存储型XSS
+
+这种XSS会把用户输入的数据‘存储在’服务器端，有很强的持久性，典型的例子就是，黑客写下一篇带有恶意JavaScript代码的博客，当访客访问这篇文章的时候，恶意脚本就会保存在用户的服务器，也称持久性XSS。
+
+- DOM Based XSS;
+
+这种情况从效果上看也属于反射型的XSS，他是通过修改页面的DOM节点来形成XSS的，称之为DOM Based XSS。简单的实现就是使用点击事件，点击之后，通过一些调用事件，添加一些或删除一些DOM节点。
+
+例如：
+
+    function atack () {
+        var str = document.getElementById('#inputBox').value;
+        document.getElementById('t').innerHTML = "<a href=' " + str + " '> testLink </a>;
+    }
+    //////////DOM
+    <div id="t"></div>
+    <input type='text' id="text" value=""/>
+    <input type="button" id="s" onclick="test()"/>
+
+当我们输入‘onclick = alert(/xss/) //’
+
+这样，a标签就变成这样：
+
+    <a href='' onclick=alert(/xss/) //'>testLink</a>
+   
+   
+发现没有？后面的单引号就被注释掉，直接就是点击事件的执行，弹出alert框。这就是典型的例子。
+
+## XSS Payload
+
+### cookie 劫持
+
+XSS攻击成功之后，攻击者能够对用户当前浏览的页面植入恶意脚本，通过恶意脚本，控制用户的浏览器，这些用以完成各种具体功能的恶意脚本。被称为XSS payload，实际上就是一个JavaScript脚本。
+
+一个最简单的的XSS payload 就是利用cookie 劫持来盗取用户的信息。在地址栏中输入：
+
+    javascript:alert(document.cookie)
+
+就能获取到的当前页面的cookie，接着，在另一个未登录的页面，设置一下这个cookie，当再次刷新页面的时候，可以发现，已经登陆的状态。
+
+但是并非所有的cookie劫持都会有效，有的网页在setCookie的时候会植入HttpOnly的标识，与客户端的IP地址绑定，从而使XSS窃取的cookie失去意义。
+
+简单滴攻击就讲到这，还有很多很多对应的，大家有兴趣可以自己了解一下。
+
+## XSS 的防御
+
+XSS的防御是复杂的。
+
+### HttpOnly
+
+HttpOnly最早由微软提出的，并在IE6中实现的，至今已经成为一个标准。浏览器进制页面的JavaScript访问带有HttpOnly属性的cookie。
+
+这个是针对cookie劫持做出的防御政策.一个cookie的使用过程如下。
+
+- 浏览器向服务器发出请求，这时候没有Cookie。
+- 服务器返回时发送一个Set-Cookie头，向客户端浏览器写入cookie。
+- 在该cookie到期前，浏览器访问该域下的所有页面，都将发送该cookie。
+
+HttpOnly是在set-Cookie时标记的：
+
+    Set-Cookie: <name>=<value>[;<Max-Age>=<age>[
+    [; expires=<data>][;domain=<domain)name>]
+    [; path=<some_path>][; secure][;HttpOnly]
+    
+需要注意的是，服务器可能会同事设置多个Cookie（多个key-value对），HttpOnly可以有选择性的加在任一歌cookie值。
+
+    <?php
+        header("Set-Cookie: cookie1=test1;");
+        header("Set-Cookie: cookie2=test2;httponly", false);
+        
+    ?>
+    <script>
+        alert(document.cookie);
+    </script>
+
+可以发现浏览器读取了两个cookie，但是javascript只能读取到第一个cookie。HttpOnly起到了应有的作用。
+
+### 输入检查
+
+使用HttpOnly有助于缓解XSS攻击，但是仍然需要其他能够解决xss攻击的方案。
+
+常见的web漏洞如XSS，SQL injection等，都要求攻击者构造一些特殊的字符，这些字符可能是正常用户不会用到的所以这个时候，输入检测就有必要了。
+
+输入检查很多时候用在格式检查。例如，用户在注册账号的时候，就会有要求只能用字母，数字的组合等，‘hello#$^’这样的就是不合法的。
+
+目前的做法，前端后端用同一个方式进行过滤，前端的输入检查，可以过滤大部分的误操作用户，从而节约服务器资源。
+
+一般来说，输入检查是用户输入的数据是否包含一些特殊字符，例如：'<','>',等。发现存在这些字符的话，就会把它们过滤。比较智能的匹配，还会匹配用户的输入时候有'<scrip>',“javascript”等敏感字符。
+
+但是，如果简单粗暴地将字符改掉，可能会改变原来用户的意思，所以，具体情况需要具体分析。例如，如果用户想输入大于小于，
+
+    1 + 1 < 2
+
+如果简单滴吧'<',过滤掉，就会把原来的意思改掉了。
+
+当然，除了以上两种方法，还有输出检查，这个大家有兴趣可以去了解一下，我就不展开讲了。
+
+今天的内容就讲到这，希望大家能有所收获。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
