@@ -94,4 +94,3 @@ keys(): 返回键
     for(let entry of data) {
         console.log(entry); // ['title', 'understanding ecmascript6], ['format', 'print']
     }
-
