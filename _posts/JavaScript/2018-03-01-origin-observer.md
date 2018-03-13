@@ -2,7 +2,7 @@
 layout: post
 title: 原生实现数据绑定Obj.defineProperty()
 date: 2018-03-01
-tags: [Javascript]
+tags: [JavaScript]
 ---
 
 将JS模型与HTML视图对应，能够减少模版编译时间同时提高用户体验，使用原生JS实现双向绑定。
