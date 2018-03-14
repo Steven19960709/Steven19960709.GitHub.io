@@ -1,20 +1,23 @@
-function Observer(data) {
+function Observer(data) {//观察者
+    // if (typeof data !== object) {
+    //     return;
+    // }
     this.data = data;
     this.walk(data);
 }
-Oberver.prototype = {
-    walk: function (data) {
+Observer.prototype = {
+    walk: function (data) {//负责将属性遍历，然后挨个绑定监听
         var me = this;
         Object.keys(data).forEach(function(key) {
-            me.conert(key, data[key]);
+            me.convert(key, data[key]);
         })
     },
-    convert: function (key, val) {
+    convert: function (key, val) {//绑定监听
         this.defineReactive(this.data, key, val);
     },
-    defineReactive: function (data, key, val) {
-        var dep = new dep();
-        var childObj = observe(val);
+    defineReactive: function (data, key, val) {//降属性使用object.defineProperty进行劫持
+        var dep = new Dep();
+        var childObj = observe(val);//遍历属性中的子属性
         Object.defineProperty(data, key, {
             enmuberable: true,
             configurable: false,
@@ -49,16 +52,16 @@ function Dep () {
     this.subs = [];
 }
 
-Dep.prototype - {
-    addSub: function (sub) {
+Dep.prototype = {
+    addSub: function (sub) {//往消息队列里面添加一个监听
         this.subs.push(sub);
     },
     depend: function () {
-        Dep.target.addDep(this);
+        Dep.target.addDep(this);//要与watcher里面的代码联系
     },
     removeSub: function(sub) {
         var index = this.subs.indexOf(sub);
-        if (index != -1) {
+        if (index !== -1) {
             this.subs.splice(index, 1);
         }
     },
