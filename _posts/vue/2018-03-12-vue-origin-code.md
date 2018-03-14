@@ -23,6 +23,8 @@ tags: [vue]
 
 ## 思路
 
+<img src='https://segmentfault.com/img/bVBQYu/view'>
+
 实现MVVM的双向绑定，就必须实现以下几点：
 
 - 实现一个数据监听器Observer，能够对数据对象的所有数据进行监听，如有变动可以拿到最新值并通知订阅者
@@ -110,6 +112,8 @@ tags: [vue]
     }
 
 ### 实现compile
+
+<img src='https://segmentfault.com/img/bVBQY3/view'>
 
 compile主要做的事情是解析模版指令，讲模版中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图。
 
