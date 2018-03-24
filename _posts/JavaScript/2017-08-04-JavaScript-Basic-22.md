@@ -140,7 +140,7 @@ async: 必须使用加载外部文件的时候才能变成异步（src），下�
 					}
 				}
 			}else{//Safari firefox goole chrome opera
-				scripte.onload = function () {
+				script.onload = function () {
 					script.onload = null; //降低性能，不用时刻监听
 					obj[callback]();
 				}
