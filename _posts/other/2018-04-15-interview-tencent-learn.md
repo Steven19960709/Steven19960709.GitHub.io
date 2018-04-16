@@ -2,7 +2,7 @@
 layout: post
 title: Tencent the second Interview
 date: 2018-04-15
-tags: [interview]
+tags: [Interview]
 ---
 
 首先，还是觉得自己挺幸运的，过了腾讯的所有面试，包括简历评估，笔试，性格测评，leader面，boss面，HR面。作为一个双非，非cs专业的奋青来说，感觉还是挺不容易的。现在写一下二面的面筋吧。
@@ -46,3 +46,5 @@ http状态码，tcp三次握手，四次挥手，讲的都挺细，然后再问�
 HR就面了10多分钟。。。
 
 面完之后，状态就显示已完成所有面试环节。。。
+
+希望最后能收到Offer吧。等待中
