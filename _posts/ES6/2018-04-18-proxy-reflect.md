@@ -104,3 +104,4 @@ Reflect.set()是set陷阱对应的反射方法和默认特性，它和set代理�
     console.log(proxy.naam) // Type Error 属性不存在
 
 这个实力可以拦截属性的读取操作，并通过in操作符来判断receiver上是否有读取的属性，这里之所以用in操作符检查receiver而不检查trapTarget是为了防止receiver代理含有has陷阱。这样写得话，就会忽略has陷阱，从而得到错误结果，属性不会抛出一个错误，否则使用默认行为。
+
