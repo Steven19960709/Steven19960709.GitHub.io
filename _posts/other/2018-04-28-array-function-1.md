@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 数组方法整理
+title: 数组方法整理(ES3)
 date: 2018-04-28
 tags: [share, JavaScript]
 ---
