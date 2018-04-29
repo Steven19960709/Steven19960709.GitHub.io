@@ -73,29 +73,29 @@ this'的值，并返回处理后的数组。传进的函数有几个参数。
 
 - find(): 返回符合传入测试（函数）条件的数组元素。
 
-    let arr = [1,2,3,4,5,6];
-    arr.find(item => item > 5) // 6;
+        let arr = [1,2,3,4,5,6];
+        arr.find(item => item > 5) // 6;
 
 - findIndex(): 返回符合传入测试（函数）条件的数组元素索引。
 
-    let arr = [1,2,3,5];
-    arr.find(item => item > 0); // 0，第一个1就比0大，马上返回
+        let arr = [1,2,3,5];
+        arr.find(item => item > 0); // 0，第一个1就比0大，马上返回
 
 - fill()：指定的值来填充一到多个数组元素。当传入一个值的时候，fill方法会用这个值重写数组中的所有值。
 
-    let number = [1,2,3,4,5,6];
-    number.fill(1);
-    console.log(numbers.toString()); // 1,1,1,1
+        let number = [1,2,3,4,5,6];
+        number.fill(1);
+        console.log(numbers.toString()); // 1,1,1,1
 
 - copyWithin(): 从数组中复制元素的值，调用copyWithin()，方法时需要传入两个参数：一个是该方法开始填充值的索引位置，另一个是开始复制值的索引位置。
 
-    let numbers = [1,2,3,4];
-    numbers.copyWithin(2,0);
-    console.log(numbers.toString()); // 1,2,1,2
-    let new = [1,2,3,4];
-    // 从索引2开始粘贴值，
-    // 从索引0开始复制值
-    // 当位于1的时候停止复制值
-    numbers.copyWithin(2,0,1);
-    console.log(numbers.toString()); /1,2,1,4
+        let numbers = [1,2,3,4];
+        numbers.copyWithin(2,0);
+        console.log(numbers.toString()); // 1,2,1,2
+        let new = [1,2,3,4];
+        // 从索引2开始粘贴值，
+        // 从索引0开始复制值
+        // 当位于1的时候停止复制值
+        numbers.copyWithin(2,0,1);
+        console.log(numbers.toString()); /1,2,1,4
 
