@@ -2,7 +2,7 @@
 layout: post
 title: React组件间通信
 date: 2018-03-27
-tags: [react]
+tags: [React]
 ---
 
 关于React组件间通讯，面试经常被问到，现在做个总结。

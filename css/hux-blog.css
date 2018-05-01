@@ -1259,3 +1259,8 @@ img::-moz-selection {
 .page-fullscreen footer .copyright a:hover {
   color: #ddd;
 }
+.short-about>img:hover {
+  width: 180px;
+  height: 165px;
+  transition: width,height 500ms;
+}
