@@ -79,3 +79,33 @@ tags: [ADT]
             bool empty() const {return _root}// 判空
             BinNodePosi(T) root() const {return _root;};//树根
     }
+
+##### 高度更新
+
+对于任意一个节点x，表示该节点通往最深的叶节点。考虑，如果只有只有一个节点的情况，或者空树（height=0）。通过宏定义方式命名。
+
+准确来说，一个树的高度等于其左节点和右节点中较大者加一。
+ 
+    #define stature(p) ((p) ? (p) -> height : -1) // 节点高度——约定空树高度为-1
+    template <typename T> //更新节点高度，具体规则因树不同而异
+    int BinTree<T>::udateHeight (BinNodePost(T)x) {
+        return x->height = 1 + max( stature( x -> lChild ), stature(x->rChild));//此处采用常规的二叉树规则，O(1)
+    }
+    template <typename T>
+    void BinTree<T>::updateHeightAbouve(BinNodePosi(T)x) {
+        while(x){
+            updateHeight(x); x = x->parent;
+        }// O(n = depth(x))
+    }
+
+##### 生成节点
+
+    template <typename T> BinNodePosi(T)
+    BinTree<T>::insertAsRc(BinNodePosi(T) x, T const & e) {
+        _size++;
+        x -> insertAsRC(e);// x祖先的高度可能增加，其余节点必然不变
+        updateHeightAbove(x);
+        return x -> rChild;
+    }
+
+将新生成的节点的位置指向右节点。拓补连接完成之后，需要更新一下x节点的高度进行更新。
