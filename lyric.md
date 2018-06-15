@@ -1,5 +1,6 @@
 ---
 layout: page
+title: 'lyric'
 description: <h2>Mr.Leung</h2>
 header-img: img/newone.jpg
 ---

@@ -1,0 +1,42 @@
+---
+layout: post
+title: Vue学习笔记（SSR）
+date: 2018-05-21
+tags: [vue]
+---
+
+服务端渲染有几个优点：
+
+- 搜索引擎优化
+- 减少页面请求数量，减少首屏时间
+- 可以为老式的浏览器提供内容
+
+简单一个例子：
+
+    const Vue = require('vue');
+    const renderer = require('vue-server-renderer').createRederer();// 创建一个渲染器
+    const app = new Vue({// 创建一个Vue实例
+        render: function (h) {
+            return h('p', 'hello world');
+        }
+    })
+    renderer.renderToString(app, fuction (error, html) {// 将vue实例渲染成HTML
+        if (error) throw error;
+        console.log(html);
+    })
+
+现在通过一个Web服务器来进行服务端渲染。
+
+    new Vue({
+        template: "<div>you have been spent {{counter}} seconds</div>",
+        data: {
+            counter: 0
+        },
+        created: function () {
+            let vm = this;
+            setInterval(() => {
+                vm.counter += 1;
+
+            }, 1000)
+        }
+    })
