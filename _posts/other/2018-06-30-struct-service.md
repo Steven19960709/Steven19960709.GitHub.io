@@ -31,7 +31,7 @@ Webpack-dev-middleware是express框架的一个中间件，简单来说，中间
 - poll: 指定webpack监听无效时轮询校验的文件的频率，单位为毫秒。webpack Listener（文件系统事件监听），对于一些不支持Filesystem Event的场景（比如虚拟机）webpack针对此类场景的备选方案。如果开发环境支持Filesystem Event，将此配置设置为false。
 
 ### 静态资源服务
-
+        
 实际开发项目中并非所有的静态文件都参与构建，一些常用的第三方库通常使用单独的script和link标签引入，例如jQuery，bootstrap等。这些文件不参与构建，不在webpack-dev-middleware的监听范围之内，也就不能够通过文件映射策略将其对应的请求映射到内存文件系统中。只能借助于Express内置的static中间件将这些文件作为静态内容开发给HTTP服务。
 
     const Express = require('express');
