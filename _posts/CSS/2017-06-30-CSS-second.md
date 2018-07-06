@@ -69,11 +69,11 @@ ok,那么现在就开始讲一讲一个盒子究竟包含的哪些部分呢？
 
 先来一段代码。
 
-    <div class='father'>
-      <div class='son'>
-      </div>
-     </div>
-     
+       <div class='father'>
+        <div class='son'>
+        </div>
+        </div>
+        
      .father{
        width:200px;
        height:200px;
@@ -152,8 +152,8 @@ margin合并讨论的就不是父子结构了，讨论的是兄弟结构。简�
  
  当然啦，一个它还要结合left/right ，和top/bottom ，来进行设置才能出现咱们想要的页面效果。那为什么要称之为层模型呢？请看下面例子。
  
-     <div class='first'></div>
-     <div class='second'></div>
+        <div class='first'></div>
+        <div class='second'></div>
      
      .first{
         position:absolute;
