@@ -2,7 +2,7 @@
 layout: post
 title: 渲染性能（2）
 date: 2018-08-03
-tags: [post]
+tags: [share]
 ---
 
 ### 优化绘制与合成
