@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（33）————JavaScript 正则表达式（第二部分）
+title: JavaScript 正则表达式（第二部分）
 date: 2017-08-06
 tags: [JavaScript]
 ---

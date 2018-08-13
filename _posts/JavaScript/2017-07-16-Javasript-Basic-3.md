@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2017-07-16
-title: 前端核心知识（12）———— JavaScript的类型转换
+title:  JavaScript的类型转换
 tags: [JavaScript]
 ---
 

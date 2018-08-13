@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（15）————JavaScript闭包深入理解及其作用与解决方法
+title: JavaScript闭包深入理解及其作用与解决方法
 date: 2017-07-21
 tags: [JavaScript]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（13）———— JavaScript函数和作用域初探
+title:  JavaScript函数和作用域初探
 date: 2017-07-18
 tags: [JavaScript]
 ---

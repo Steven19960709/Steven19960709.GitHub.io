@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（31）————JavaScript JSON数据传输格式
+title: JavaScript JSON数据传输格式
 date: 2017-08-04
 tags: [JavaScript]
 ---

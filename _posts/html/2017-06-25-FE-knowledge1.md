@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端基础知识（1）———— HTML1 标签预热
+title:  HTML1 标签预热
 date: 2017-06-25
 categories: blog
 tags: [HTML]

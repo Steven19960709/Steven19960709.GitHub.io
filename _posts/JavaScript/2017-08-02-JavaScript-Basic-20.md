@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（29）———— JavaScript 事件冒泡，捕获（事件处理模型）和事件委托
+title:  JavaScript 事件冒泡，捕获（事件处理模型）和事件委托
 date: 2017-08-02
 tags: [JavaScript]
 ---

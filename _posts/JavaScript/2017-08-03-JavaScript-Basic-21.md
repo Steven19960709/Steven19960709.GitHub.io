@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（30）———— JavaScript 事件类型
+title:  JavaScript 事件类型
 date: 2017-08-03
 tags: [JavaScript]
 ---

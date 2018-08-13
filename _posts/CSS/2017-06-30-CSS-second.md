@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2017-06-30
-title: 前端基础知识（6）———— margin塌陷和margin合并
+title: margin塌陷和margin合并
 categories: blog
 tags: [CSS]
 ---

@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 前端核心知识（14）———— JavaScript预编译、作用域和闭包
+title:  JavaScript预编译、作用域和闭包
 date: 2017-07-19
 tags: [JavaScript]
 ---
 
-大家好，今天要讲的东西是JavaScript的预编译环节，JavaScript作用域和JavaScript一个很恶心的概念————闭包。事不宜迟，马上开讲。
+大家好，今天要讲的东西是JavaScript的预编译环节，JavaScript作用域和JavaScript一个很恶心的概念————闭包。
 
 
 ## 预编译铺垫

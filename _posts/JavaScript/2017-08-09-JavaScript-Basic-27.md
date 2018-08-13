@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（35）———— JavaScript 零散知识和BOM
+title: JavaScript 零散知识和BOM
 date: 2017-08-09
 tags: [JavaScript]
 ---

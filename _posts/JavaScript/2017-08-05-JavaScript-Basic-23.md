@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（32）————JavaScript加载时间线
+title: JavaScript加载时间线
 date: 2017-08-04
 tags: [JavaScript]
 ---

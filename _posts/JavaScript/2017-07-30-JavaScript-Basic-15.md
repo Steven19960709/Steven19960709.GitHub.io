@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端核心知识（24）———— JavaScript DOM操作（增删改查）和基本编程练习
+title: JavaScript DOM操作（增删改查）和基本编程练习
 date: 2017-07-30
 tags: [JavaScript]
 ---

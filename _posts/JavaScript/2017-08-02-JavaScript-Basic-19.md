@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  前端核心知识（28）———— JavaScript 事件绑定和事件解除
+title:   JavaScript 事件绑定和事件解除
 date: 2017-08-02
 tags: [JavaScript]
 ---
