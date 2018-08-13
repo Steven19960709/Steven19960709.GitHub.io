@@ -29,6 +29,9 @@ tags: [React]
         }
         componentWillMount () {
             //...
+        }// 已取消此方法
+        getDerivedStateFromProps () {
+            // 新增的生命周期
         }
         componentDidMount () {
             //...
@@ -38,7 +41,7 @@ tags: [React]
         }
     }
 
-显然易见的componentWillMount会在render方法之前执行，而ComponentDidMount会在render执行之后执行。这里要注意的是，如果在componentWillMount里面使用setState的话是一次无意义的操作，因为render的时候，会初始化state，所以可以直接在state里面设置初始化数据就可以了。
+显然易见的<span><del>componentWillMount</del></span>(该生命周期函数已取消)会在render方法之前执行，而ComponentDidMount会在render执行之后执行。这里要注意的是，如果在componentWillMount里面使用setState的话是一次无意义的操作，因为render的时候，会初始化state，所以可以直接在state里面设置初始化数据就可以了。
 
 组件卸载的时候只有componentWillUnMount这一个卸载前的状态，通常会执行一些清理方法，如事件的回收或是清除定时器等。
 
@@ -73,4 +76,41 @@ shouldComponentUpdate的本质是用来进行正确的组件渲染。考虑一�
 componentWillUpdate和componentDidUpdate分别代表更新过程中渲染前后的时刻，前者会提供更新的props和state，而后者将是提供更新前的props和state。但是不能自componentWillUpdate中执行setState。
 
 如果组建时有父组件更新Props而更新的，那么在shouldComponentUpdate之前会先执行componentWillReceiveProps方法。此方法可以作为React在props传入后，渲染之前setState的机会。
+
+### 新增的生命周期
+
+- getDerviedStateFromProps
+
+一个静态方法，所以不能在这个函数里面使用this，这个函数有两个参数props和state，分别直接收到的新参数和当前的state对象，这个函数会返回一个对象用来更新当前的state对象，如果不需要更新可以返回null。
+
+该函数会在挂载时，接受到新的Props，调用setState和forceUpdate时被调用。
+
+    class ExampleComponent extends React.Component {
+        state = {
+            isScrollingDown: false,
+            lastRow: null
+        }
+        static getDerivedStateFromProps(nextProps, prevState) {
+            if (nextProps.currentRow !== prevState.lastRow) {
+                return {
+                    isScrollingDown: 
+                        nextProps.currentRow > prevState.lastRow,
+                        lastRow: nextProps.currentRow
+                }
+            }
+            return null;
+        }
+    }
+
+- getSnapshorBeforeUpdate
+
+这个方法在render之后，componentDidMount之前调用，有两个参数prevProps和prevState，表示之前对 属性和之前的state，这个函数有一个返回值，会作为第三个参数传给componentDidUpdate。
+
+-------------------------------------------------------------------------
+
+废弃的三个生命周期函数
+
+- componentWillMount
+- componentWillReceiveProps
+- componentWillUpdate
 

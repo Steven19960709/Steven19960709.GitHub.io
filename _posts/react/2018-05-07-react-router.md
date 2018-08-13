@@ -2,7 +2,7 @@
 layout: post
 title: react-router中hashHistory与browserHistory区别
 date: 2018-05-07
-tags: [react]
+tags: [React]
 ---
 
 对于使用hashHistory来说，浏览器上看到的url会是这样的:/#/user/haishanh?_k=fdfadfasdf
