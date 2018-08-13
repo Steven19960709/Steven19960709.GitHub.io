@@ -2,7 +2,7 @@
 layout: post
 title: 数组方法整理（ES5,ES6）
 date: 2018-04-29
-tags: [share]
+tags: [JavaScript]
 ---
 
 ## ES5 

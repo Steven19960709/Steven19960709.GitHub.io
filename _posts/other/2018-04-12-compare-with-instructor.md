@@ -2,7 +2,7 @@
 layout: post
 title: 构建工具
 date: 2018-04-12
-tags: [share]
+tags: [project]
 ---
 
 这篇文章主要是做一二归纳关于不同的构建工具。

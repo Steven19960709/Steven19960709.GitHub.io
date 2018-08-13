@@ -2,7 +2,7 @@
 layout: post
 title: 读高性能JavaScript笔记（2）
 date: 2017-08-29
-tags: [JavaScript,share]
+tags: [share]
 ---
 
 今天看的高性能，在Mark一下。
