@@ -2,7 +2,7 @@
 layout: post
 title: websocket https握手过程等网络相关问题
 date: 2017-10-09
-tags: [Interview,html5,net]
+tags: [network]
 ---
 
 这篇文章是关于websocket的。在这里Mark一下，方便以后查看。
