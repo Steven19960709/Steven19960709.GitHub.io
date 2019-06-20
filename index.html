@@ -63,6 +63,20 @@ header-img: img/newone.jpg
 </head>
 <style>
     .main {
+        display: none;
+    }
+@media screen and (min-width: 720px) {
+    .wrapper {
+        width: 500px;
+        height: 300px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        margin-left: -250px;
+        margin-top: 150px;
+        /* border: 1px solid #aaddcc; */
+    }
+    .main {
         width: 500px;
         margin-left: 35%;
         margin-top: 15%;
@@ -103,12 +117,15 @@ header-img: img/newone.jpg
         border-radius: 10px;
         background: #acc
     }
-    video {
+    .imgwrapper {
         height: auto;
         width: 500px;
         text-align: center;
         justify-content: center;
         /* margin-top: 200px; */
+    }
+    .alert {
+        width: 500px;
     }
     /* .wendu {
         background-image: url('./temperature.jpg');
@@ -118,30 +135,142 @@ header-img: img/newone.jpg
     img {
         width: 160px;
     }
-    
+}
+    @media screen and (max-width: 420px) {
+        body {
+            background-color:#ddd;
+        }
+        .header {
+            width: 300px;
+            font-size: 32px;
+        }
+        .middle {
+            display: flex;
+            flex-direction: column;
+            /* flex-grow: 1; */
+        }
+        .item {
+            width: 200px;
+            height: 200px;
+            flex-grow: 1;
+        }
+        img {
+            width: 160px;
+        }
+        .wrapper {
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+    .word {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+    input {
+        width: 300px;
+        height: 28px;
+        margin: 3px 0px 3px 0px;
+        /* padding: 3px; */
+        /* border-radius: 10px; */
+    }
+    .loginwrapper{
+        font-size: 16px;
+    }
+    .logbut {
+        width: 89px;
+        height: 34px;
+        background: #1890ff;
+        text-align: center;
+        line-height: 28px;
+        color: #ffa;
+        border-radius: 3px;
+        padding-top: 4px;
+        margin-top: 30px; 
+        margin-left: 100px;
+    }
 </style>
 <body>
+        <div class="wrapper">
+                <div class="word">
+                    <span>欢迎使用站台监控系统，请先登录</span>
+                </div>
+                <div class="loginWrapper">
+                    <div class="loginword">
+                        <div class="userwrapper">
+                                <span>账号:</span>
+                        </div>
+                        <input type="text">
+                    </div>
+                    <div class="password">
+                        <div class="passwrapper">
+                                <span>密码:</span>
+                        </div>
+                        <input type="password">
+                    </div>
+                    <div class="logbut">
+                        登录
+                    </div>
+                </div>
+        
+            </div>
     <div class="main">
+
+                
         <div class="header">端站台监控系统</div>
         <div class="middle">
             <div class="left">
                 <div class="item wendu">温度27摄氏度
 
-                    <img src="./img/temperature.jpg" alt="">
+                    <img src="./temperature.jpg" alt="">
                 </div>
                 <div class="item shidu">湿度：相对湿度22%
-                        <img src="./img/noisy.jpg" alt="">
+                        <img src="./noisy.jpg" alt="">
                 </div>
-                <div class="item distance">危险距离中无人
-                        <img src="./img/dangerous.jpg" alt="">
+                <div class="item distance">危险距离中有无人
+                        <img class='image' src="./dangerous.jpg" alt="">
                 </div>
             </div>
         </div>
         <div class="bottom">
-                视频区域
-                <video src="img/theMonitorSystem.mkv" autoplay="false" controls ></video>
+                监控图片
+                <div class='imgwrapper'>
+                    <img src="" alt="" class="alert">
+                </div>
+                <!-- <video src="./theMonitorSystem.mkv" autoplay="false" controls ></video> -->
         </div>
     </div>
+    <script>
+    
+    let login = document.getElementsByClassName('logbut')[0]
+    let main = document.getElementsByClassName('main')[0]
+    let wrapper = document.getElementsByClassName('wrapper')[0]
+    let img = document.getElementsByClassName('image')[0]
+    let alert = document.getElementsByClassName('alert')[0]
+    let a = true
+    // login.addEventListener('cli')
+    login.onclick = function () {
+        console.log('click')
+        main.style.display = 'block'
+        wrapper.style.display = 'none'
+        setTimeout(() => {
+            setInterval(() => {
+                console.log('1')
+                if (a) {
+                    // console.log('')
+                    img.style.display = 'none'
+                    a = false
+                    console.log(a)
+                } else {
+                    img.style.display = 'block'
+                    a = true
+                }
+            }, 1000)
+            alert.src = "./danggou.jpg"
+        }, 3000)
+    }
 
+    </script>
 </body>
 </html> -->
